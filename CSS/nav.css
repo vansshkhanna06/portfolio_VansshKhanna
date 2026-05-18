@@ -1,0 +1,146 @@
+/* ================= COMMON NAVBAR CSS ================= */
+
+/* GOOGLE FONT */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Inter',sans-serif;
+}
+
+/* BODY */
+body{
+  background:#050510;
+  color:#ffffff;
+}
+
+/* NAVBAR */
+.navbar{
+  width:100%;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  padding:25px 8%;
+
+  position:relative;
+  z-index:1000;
+}
+
+/* LOGO */
+.logo{
+  font-size:28px;
+  font-weight:700;
+  color:#ffffff;
+  letter-spacing:1px;
+}
+
+.logo span{
+  color:#9f5cff;
+}
+
+/* NAV LINKS */
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:35px;
+
+  list-style:none;
+
+  padding:14px 30px;
+
+  border-radius:18px;
+
+  background:rgba(255,255,255,0.04);
+
+  border:1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter:blur(10px);
+}
+
+/* NAV LINK */
+.nav-links li a{
+  text-decoration:none;
+
+  color:#d1d1d1;
+
+  font-size:14px;
+  font-weight:500;
+
+  transition:0.3s;
+}
+
+.nav-links li a:hover{
+  color:#9f5cff;
+}
+
+/* ACTIVE LINK */
+.nav-links li a.active{
+  color:#9f5cff;
+}
+
+/* BUTTON */
+.hire-btn{
+  padding:12px 24px;
+
+  border:none;
+  border-radius:12px;
+
+  cursor:pointer;
+
+  background:linear-gradient(135deg,#a855f7,#7c3aed);
+
+  color:#ffffff;
+
+  font-weight:600;
+
+  transition:0.3s;
+
+  box-shadow:0 0 20px rgba(139,92,246,0.4);
+}
+
+.hire-btn:hover{
+  transform:translateY(-3px);
+
+  box-shadow:0 0 25px rgba(139,92,246,0.6);
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+
+  .navbar{
+    flex-direction:column;
+    gap:25px;
+  }
+
+  .nav-links{
+    gap:20px;
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+}
+
+@media(max-width:600px){
+
+  .logo{
+    font-size:22px;
+  }
+
+  .nav-links{
+    padding:12px 20px;
+    gap:15px;
+  }
+
+  .nav-links li a{
+    font-size:13px;
+  }
+
+  .hire-btn{
+    padding:10px 20px;
+    font-size:14px;
+  }
+}
